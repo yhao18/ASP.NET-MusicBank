@@ -1,0 +1,45 @@
+﻿@model W2022A6YH.Models.TrackDetailViewModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Track details</h2>
+
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <hr />
+
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClipUrl)
+        </dt>
+
+        <dd>
+            <audio src="/clip/@Model.Id" controls="controls"></audio>
+        </dd>
+
+        <hr />
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Composers)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Composers)
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>
